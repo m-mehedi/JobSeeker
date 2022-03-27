@@ -1,5 +1,21 @@
+import Landing from "./pages/Landing"
+import styled from 'styled-components'
+
+const Button = styled.button`
+background: red;
+color: white;
+font-size: 1rem;
+`
+
 function App(){
-    return <h1>Job Seeker</h1>
+    return(
+    <div>
+        <h1></h1>
+        <Landing />
+    </div> 
+
+    )
+
 }
 
 export default App;
