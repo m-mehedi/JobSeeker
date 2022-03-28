@@ -1,12 +1,13 @@
-import logo from '../assets/images/logo.svg'
-import main from '../assets/images/main.svg'
+import main from '../assets/images/art-2.svg'
 import styled from 'styled-components'
+// import Logo from '../components/Logo'
+import { Logo } from '../components'
 
 const Landing = () => {
   return (
     <Wrapper>
         <nav>
-            <img src={logo} alt='Job Seeker' className='logo' />
+            <Logo/>
         </nav>
         <div className='container page'>
             <div className="info">
