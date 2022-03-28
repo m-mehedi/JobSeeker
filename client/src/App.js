@@ -11,11 +11,6 @@ font-size: 1rem;
 function App(){
     return(
         <BrowserRouter>
-        <nav className="flex sm:justify-left space-x-4">
-        <Link to='/' className="rounded-lg px-3 py-2 text-purple-700 font-medium hover:bg-purple-100 hover:text-purple-900">Dashboard</Link>
-        <Link to='/register' className="rounded-lg px-3 py-2 text-purple-700 font-medium hover:bg-purple-100 hover:text-purple-900">Register</Link>
-        <Link to='/landing' className="rounded-lg px-3 py-2 text-purple-700 font-medium hover:bg-purple-100 hover:text-purple-900">Landing</Link>
-        </nav>
             <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/register" element={<Register />} />
