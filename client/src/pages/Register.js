@@ -1,9 +1,55 @@
-import React from 'react'
+import { useState, useEffect } from "react";
+import { Logo, FormRow } from "../components";
+import Wrapper from "../assets/wrappers/RegisterPage";
 
-function Register() {
+const initialState = {
+  name: "",
+  email: "",
+  password: "",
+  isMember: true,
+};
+
+const Register = () => {
+  const [values, setValues] = useState(initialState);
+  // global state and useNavigate
+  const handleChange = (e) => {
+    console.log(e.target);
+  };
+
+  const onSubmit = () => {
+    e.preventDefault();
+    console.log(e.target);
+  };
+
   return (
-    <h1>Register</h1>
-  )
-}
+    <Wrapper className="full-page" onSubmit={onSubmit}>
+      <form className="form">
+        <Logo />
+        <h3>Login</h3>
+        <FormRow
+          type="text"
+          name="name"
+          value={values.name}
+          handleChange={handleChange}
+        />
+        <FormRow
+          type="email"
+          name="email"
+          value={values.email}
+          handleChange={handleChange}
+        />
+        <FormRow
+          type="password"
+          name="password"
+          value={values.password}
+          handleChange={handleChange}
+        />
+        <button type="submit" className="btn btn-block">
+          Login
+        </button>
+      </form>
+    </Wrapper>
+  );
+};
 
-export default Register
+export default Register;
